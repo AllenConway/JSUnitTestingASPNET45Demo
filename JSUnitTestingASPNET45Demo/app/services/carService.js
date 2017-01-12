@@ -15,14 +15,18 @@ class carService {
 
    getCarsAsync() {
 
-      var result = $q.defer();
+      //var result = $q.defer();
 
-      //Some longer running API call...
-      setTimeout(() => {
-         result.resolve(true);
-      }, 2500);
+      ////Some longer running API call...
+      //setTimeout(() => {
+      //   result.resolve(true);
+      //}, 2500);
 
-      return result.promise;
+      //return result.promise;
+
+      //$timeout returns a promise, so could use this instead of $q above
+      //Some longer running API call...      
+      return $timeout(function () { }, 2500);
    }
 }
 
